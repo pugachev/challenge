@@ -66,4 +66,4 @@ $results = $qfd->getFemaleData();
     </div>
   </main>
 
-<?php include 'footer.php' ?><?php
+<?php include 'footer.php' ?>
