@@ -51,3 +51,17 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `age` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `agevalue` int(2) NOT NULL COMMENT '年齢値',
+  `agedisp` text NOT NULL COMMENT '年齢表示',
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into age (`agevalue`,`agedisp`) VALUES
+('10','10代'),
+('20','20代'),
+('30','30代'),
+('40','40代'),
+('50','50代');
