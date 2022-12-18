@@ -1,6 +1,6 @@
 <?php
 include __DIR__.'\connect.php';
-include 'C:\xampp\htdocs\mytest\model\femaleData.php';
+include 'C:\xampp\htdocs\challenge\model\femaleData.php';
 
 class QueryFemaleData extends connect{
     private $femaledata;

@@ -1,12 +1,8 @@
+<?php include 'header.php' ?>
 <?php
-include __DIR__.'/lib/queryFemaleData.php';
-// include __DIR__.'/model/femaleData.php';
-
 $qfd=new QueryFemaleData();
 $results = $qfd->getFemaleData();
-
 ?>
-<?php include 'header.php' ?>
 <style>
         .wrap {
             display:flex;

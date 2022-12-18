@@ -1,3 +1,6 @@
+<?php
+include __DIR__.'/lib/queryFemaleData.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,7 +27,7 @@
       </div>
       <div>
         <h1>池フクロウ</h1>
-        <p>jQueryの手習いです</p>
+        <p>50代のチャレンジャーです</p>
         <ul>
           <li>
             <a href="#">
