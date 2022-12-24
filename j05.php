@@ -1,7 +1,5 @@
 <?php include 'header.php' ?>
 <?php
-$qfd=new QueryFemaleData();
-$results = $qfd->getFemaleData();
 $arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"その他"];
 ?>
 <style>
@@ -56,6 +54,7 @@ $arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"�
 </script>
   <main>
     <div class="container">
+      <form action ="j05-result.php" method="post">
         <div class="form">
             <?php
               foreach($arraylist as $key => $val){
@@ -64,8 +63,10 @@ $arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"�
               }
             ?>
             <hr>
-            <input type="textarea" name="bijin" id="bijintext" style="width:50%;height:100px;"></textarea>
+            <input type="textarea" name="bijintext" id="bijintext" style="width:50%;height:100px;"></textarea>
         </div>
+        <input type="submit" value="送信"/>
+      </form>
     </div>
   </main>
 

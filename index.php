@@ -17,7 +17,11 @@
           <td>[4]とそれ意外で制御を変更</td>
         </tr>
         <tr>
-          <td>selectbox動的連携</td>
+          <td><a href="http://localhost/challenge/j05.php" target="_blank">checkbox受信</a></td>
+          <td>checkboxの値をPHPで受け取る</td>
+        </tr>
+        <tr>
+          <td><a href="http://localhost/challenge/j04.php" target="_blank">selectbox動的連携</a></td>
           <td>夫婦の動きに合わせて初期化する</td>
         </tr>
         <tr>

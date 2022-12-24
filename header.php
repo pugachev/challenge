@@ -1,5 +1,7 @@
 <?php
+include __DIR__.'/lib/connect.php';
 include __DIR__.'/lib/queryFemaleData.php';
+include __DIR__.'/lib/queryAgeData.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
