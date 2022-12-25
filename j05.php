@@ -1,9 +1,37 @@
 <?php include 'header.php' ?>
 <?php
-$arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"その他"];
+$qfd=new QueryFemaleData();
+$results = $qfd->getFemaleData();
+$arraylist = [0=>"Dカップ以上",1=>"美脚",2=>"スレンダー",3=>"その他"];
 ?>
 <style>
-  .form {
+  .wrap {
+      display:flex;
+      flex-flow: column;
+      height:300px;
+      margin:0 0 1em;
+  }
+  .content {
+      padding:1em;
+      margin:0.5em auto;
+      width:50%;
+  }
+
+  .raidozone>label{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .raidozone>label:hover{
+      color: red;
+  }
+  .raidozone>label>input{
+      margin-right: 5px;
+      cursor: pointer;
+  }
+  .checkboxzone {
     display: flex;
     flex-direction: column;
     margin: 30px auto;
@@ -19,6 +47,21 @@ $arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"�
 </style>
 <script>
     $(document).ready(function(){
+        $("#addSelect").on('click',function(){
+            //現在のfemale-groupsの長さを取得する
+            let groupCnt = $("#female-groups > .female-group").length;
+            //ボタンの1個上ののfemale-groupをコピーする(中身は同じはず)
+            //クラスは同じものが複数あるので一番最後のやつをコピーする
+            let div =  $(this).prev().find('.female-group').eq(-1).clone(true);
+            //idとnameを書き換える
+            div.find('select[id*=female]').attr('id','female'+(Number(groupCnt)));
+            div.find('select[name*=female]').attr('name','female'+(Number(groupCnt)));
+            //新たに用意したdivをボタンの1個上のfemale-groupを追加する
+            //クラスは同じものが複数あるので一番最後のやつの後ろにコピーする
+            $(div).insertAfter($('.female-group').eq(-1));     
+        });
+
+
         //チェックボックス全部の状態を感知
         $("input[name='bijin[]']").change(function(){
             //チェックボックス全部の選択状態を調べる
@@ -50,22 +93,48 @@ $arraylist = [0=>"馬場ちゃん",1=>"たにじー",2=>"秋田の巨人",3=>"�
                 }
             });
         });
+
+        //
     });
 </script>
   <main>
     <div class="container">
       <form action ="j05-result.php" method="post">
-        <div class="form">
-            <?php
-              foreach($arraylist as $key => $val){
-                $id = "bijin" . $key;
-                echo '<div class="bijin"><input type="checkbox" name="bijin[]" id="'.$id.'" class="bijin" value="'.$key.'">'.$val.'</div>';
-              }
-            ?>
-            <hr>
-            <input type="textarea" name="bijintext" id="bijintext" style="width:50%;height:100px;"></textarea>
+        <div class="wrap">
+            <div class="content">
+                <div id="female-groups" style="display:flex;flex-flow: column;">
+                    <div class="female-group">
+                        <select id="female" name="female" style="width:200px;height: 30px;font-size:20px;margin-bottom:30px;">
+                            <?php foreach($results as $data): ?>
+                                <option value="<?php echo $data->getFemaleNumber(); ?>"><?php echo $data->getFemaleName() ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <input type="button" value="+" id="addSelect">
+                <div id="tgt"></div>
+                <div class="raidozone">
+                    <label><input type="radio" name="marriged" value=0>既婚</label>
+                    <label><input type="radio" name="marriged" value=1>未婚</label>
+                    <label><input type="radio" name="marriged" value=2>不明</label>
+                </div>
+                <div class="checkboxzone">
+                  <?php
+                    foreach($arraylist as $key => $val){
+                      $id = "bijin" . $key;
+                      echo '<div class="bijin"><input type="checkbox" name="bijin[]" id="'.$id.'" class="bijin" value="'.$key.'">'.$val.'</div>';
+                    }
+                  ?>
+                  <hr>
+                  <input type="textarea" name="bijintext" id="bijintext" style="width:100%;height:100px;"></textarea>
+                </div>
+
+
+                <input type="submit" value="送信"/>
+            </div>
+            
         </div>
-        <input type="submit" value="送信"/>
+        
       </form>
     </div>
   </main>
