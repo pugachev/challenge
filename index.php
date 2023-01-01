@@ -9,19 +9,19 @@
           <th>備考</th>
         </tr>
         <tr>
-          <td><a href="http://localhost:8888/challenge/j01.php" target="_blank">selectbox動的追加</a></td>
+          <td><a href="http://localhost/challenge/j01.php" target="_blank">selectbox動的追加</a></td>
           <td>idとnameの後ろに数値つける</td>
         </tr>
         <tr>
-          <td><a href="http://localhost:8888/challenge/j03.php" target="_blank">checkbox制御</a></td>
+          <td><a href="http://localhost/challenge/j03.php" target="_blank">checkbox制御</a></td>
           <td>[4]とそれ意外で制御を変更</td>
         </tr>
         <tr>
-          <td><a href="http://localhost:8888/challenge/j05.php" target="_blank">様々なformから受信</a></td>
+          <td><a href="http://localhost/challenge/j05.php" target="_blank">様々なformから受信</a></td>
           <td>checkboxの値をPHPで受け取る</td>
         </tr>
         <tr>
-          <td><a href="http://localhost:8888/challenge/j04.php" target="_blank">selectbox動的連携</a></td>
+          <td><a href="http://localhost/challenge/j04.php" target="_blank">selectbox動的連携</a></td>
           <td>夫婦の動きに合わせて初期化する</td>
         </tr>
         <tr>
@@ -33,7 +33,7 @@
           <td>findを使用する</td>
         </tr>
         <tr>
-          <td><a href="http://localhost:8888/challenge/j02.php" target="_blank">モーダルダイアログ</a></td>
+          <td><a href="http://localhost/challenge/j02.php" target="_blank">モーダルダイアログ</a></td>
           <td>colorboxを使用</td>
         </tr>
       </table>
