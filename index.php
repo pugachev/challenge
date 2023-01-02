@@ -21,6 +21,10 @@
           <td>checkboxの値をPHPで受け取る</td>
         </tr>
         <tr>
+          <td><a href="http://localhost/challenge/j06.php" target="_blank">様々なformから受信(2)</a></td>
+          <td>jQueryで送信データを整える</td>
+        </tr>
+        <tr>
           <td><a href="http://localhost/challenge/j04.php" target="_blank">selectbox動的連携</a></td>
           <td>夫婦の動きに合わせて初期化する</td>
         </tr>
