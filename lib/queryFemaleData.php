@@ -1,6 +1,7 @@
 <?php
 
-include 'C:\xampp\htdocs\challenge\model\femaleData.php';
+include 'model/femaleData.php';
+// include 'C:\xampp\htdocs\challenge\model\femaleData.php';
 // include '/Applications/MAMP/htdocs/challenge/model/femaleData.php';
 
 class QueryFemaleData extends connect{

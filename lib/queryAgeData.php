@@ -1,6 +1,7 @@
 <?php
 
-include 'C:\xampp\htdocs\challenge\model\ageData.php';
+include 'model/ageData.php';
+// include 'C:\xampp\htdocs\challenge\model\ageData.php';
 // include '/Applications/MAMP/htdocs/challenge/model/ageData.php';
 
 class QueryAgeData extends connect{
