@@ -33,7 +33,7 @@
           <td>Parentから子供孫までの長さを知る</td>
         </tr>
         <tr>
-          <td>テーブル内を検索する</td>
+          <td><a href="http://localhost/challenge/j07.php" target="_blank">テーブル内を検索する</a></td>
           <td>findを使用する</td>
         </tr>
         <tr>
