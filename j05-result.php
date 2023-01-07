@@ -35,6 +35,7 @@ if (isset($_POST['bijin']) && is_array($_POST['bijin'])) {
 
 if (isset($_POST['bijintext']) && !empty($_POST['bijintext'])) {
   $bijintext= json_encode($_POST['bijintext']);
+  //受信した配列 '["1","2"]'
 }
 ?>
 <style>
@@ -98,6 +99,7 @@ if (isset($_POST['bijintext']) && !empty($_POST['bijintext'])) {
 
       //チェックボックスの再現
       let features_array = JSON.parse('<?php echo $features; ?>');
+      //パースした配列 (2) ['1', '2']
       for(let i=0;i<features_array.length;i++){
         let tid="#bijin"+features_array[i];
         $(tid).prop("checked",true);
