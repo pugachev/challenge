@@ -29,8 +29,8 @@
           <td>夫婦の動きに合わせて初期化する</td>
         </tr>
         <tr>
-          <td>追加文字列によって文字色を変更する</td>
-          <td>Parentから子供孫までの長さを知る</td>
+        <td><a href="http://localhost/challenge/j08.php" target="_blank">アニメーションテスト</a></td>
+          <td>点滅するボタン</td>
         </tr>
         <tr>
           <td><a href="http://localhost/challenge/j07.php" target="_blank">テーブル内を検索する</a></td>
