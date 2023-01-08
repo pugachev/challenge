@@ -173,19 +173,29 @@
     $(function() {
         $target1 = $('.point1');
         $target1.on('click', e=> {
-        $target1.removeClass('-active');
+            $target1.removeClass('-active');
             $(e.currentTarget).addClass('-active');
+            setTimeout(function(){
+                $target2 = $('.point2');
+                $target2.removeClass('-active');
+                $target2.addClass('-active');
+            },5000);
+            setTimeout(function(){
+                $target3 = $('.point3');
+                $target3.removeClass('-active');
+                $target3.addClass('-active');
+            },20000); 
         });
-        $target2 = $('.point2');
-        $target2.on('click', e=> {
-        $target2.removeClass('-active');
-            $(e.currentTarget).addClass('-active');
-        });
-        $target3 = $('.point3');
-        $target3.on('click', e=> {
-        $target3.removeClass('-active');
-            $(e.currentTarget).addClass('-active');
-        });
+        // $target2 = $('.point2');
+        // $target2.on('click', e=> {
+        // $target2.removeClass('-active');
+        //     $(e.currentTarget).addClass('-active');
+        // });
+        // $target3 = $('.point3');
+        // $target3.on('click', e=> {
+        // $target3.removeClass('-active');
+        //     $(e.currentTarget).addClass('-active');
+        // });
     });
 
 </script>
