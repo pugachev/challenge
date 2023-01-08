@@ -21,7 +21,7 @@
                 background-color: rgba(173, 255, 47, 0.4)
             }
             100% {
-                transform: translate(-50%, -50%) scale(6.5, 6.5);
+                transform: translate(-50%, -50%) scale(2.5, 2.5);
                 background-color: rgba(173, 255, 47, 0)
             }
         }
@@ -32,7 +32,7 @@
                 background-color: rgba(255, 215, 0, 0.4)
             }
             100% {
-                transform: translate(-50%, -50%) scale(6.5, 6.5);
+                transform: translate(-50%, -50%) scale(2.5, 2.5);
                 background-color: rgba(255, 215, 0,0)
             }
         }
@@ -43,7 +43,7 @@
                 background-color: rgba(255, 182, 193, 0.4)
             }
             100% {
-                transform: translate(-50%, -50%) scale(6.5, 6.5);
+                transform: translate(-50%, -50%) scale(2.5, 2.5);
                 background-color: rgba(255, 182, 193,0)
             }
         }
@@ -51,9 +51,32 @@
         .inner {
             display: flex;
             justify-content: center;
-            margin-top: 300px;
+            margin-top: 200px;
         }
-
+        .button_wrapper{
+            text-align:center;
+        }
+        .css-button-neumorphic {
+            margin-top: 50px;
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            background: #efefef;
+            box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+            color: #585858;
+        }
+        .css-button-neumorphic:active {
+            box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+        }
         .point1 {
             display: block;
             position: relative;
@@ -186,10 +209,19 @@
                 $target3.addClass('-active');
             },20000); 
         });
+
+        $('#initialbtn').click(function(){
+            $target1.removeClass('-active');
+            $target2.removeClass('-active');
+            $target3.removeClass('-active');
+        });
     });
 
 </script>
   <main>
+        <div class="button_wrapper">
+            <button id="initialbtn" class="css-button-neumorphic">初期化</button>
+        </div>
         <div class="inner">
             <span class="point1">吸う</span>
             <span class="point2">止める</span>
