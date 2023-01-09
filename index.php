@@ -25,7 +25,7 @@
           <td>jQueryで送信データを整える</td>
         </tr>
         <tr>
-          <td><a href="http://localhost/challenge/j04.php" target="_blank">selectbox動的連携</a></td>
+          <td><a href="http://localhost/challenge/j04.php" target="_blank">selectbox2個セットで動的追加</a></td>
           <td>夫婦の動きに合わせて初期化する</td>
         </tr>
         <tr>
@@ -39,6 +39,10 @@
         <tr>
           <td><a href="http://localhost/challenge/j02.php" target="_blank">モーダルダイアログ</a></td>
           <td>colorboxを使用</td>
+        </tr>
+        <tr>
+          <td><a href="http://localhost/challenge/j09.php" target="_blank">selectbox選択肢動的変更</a></td>
+          <td>selectboxの選択の順番で選択肢の内容が変化する</td>
         </tr>
       </table>
     </div>
