@@ -18,3 +18,31 @@ Foreign key constraint is incorrectly formed
 そうでないカラムはUNIQUEを設定する必要がある
 
 https://qiita.com/ymzkjpx/items/a4dc01c2a7da32bb8712
+
+
+//連想配列→配列パースのパターン
+$tmp=array();
+$fd = array('id'=>100,'value'=>'AAA');
+$tmp[] = $fd;
+$fd = array('id'=>200,'value'=>'BBB');
+$tmp[] = $fd;
+foreach($tmp as $data){
+    print_r($data['id'].'   '.$data['value'].PHP_EOL);
+}
+
+//連想配列→json_encode→json_decode→連想配列
+$converted= json_encode($tmp);//連想配列→JSON
+print_r('変換前 '.$converted.PHP_EOL);
+$converted=json_decode($converted);//連想配列→JSON
+//配列になっている
+print_r('変換後 '.PHP_EOL);
+foreach ($converted as $value){
+    print_r($value->id.'   '.$value->value.PHP_EOL);
+}
+
+//javascriptでjson配列をパース
+let tgt='[{"id":100,"value":"AAA"},{"id":200,"value":"BBB"}]';
+let senddatajson=JSON.parse(tgt);
+senddatajson.forEach((e)=>{
+	console.log(e.id+'   '+e.value);
+});

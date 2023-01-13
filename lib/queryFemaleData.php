@@ -26,24 +26,40 @@ class QueryFemaleData extends connect{
     public function getFemaleDataByAge($age){
         $stmt = $this->dbh->prepare("SELECT * FROM female where femaleage=".$age);
         $stmt->execute();
-        return $this->setFemaleAllData($stmt->fetchAll(PDO::FETCH_ASSOC));
+        return $this->setFemaleAllArrayData($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
     public function setFemaleAllData($data){
         $tmp=array();
         foreach($data as $val){
             $fd = new FemaleData();
-            $fd->setId($val['id']);
-            $fd->setFemaleNumber($val['femalenumber']);
-            $fd->setFemaleName($val['femalename']);
-            $fd->setFemaleNote($val['femalenote']);
-
-            $tmp[] = $fd;
+            // $fd->setId($val['id']);
+            // $fd->setFemaleNumber($val['femalenumber']);
+            // $fd->setFemaleName($val['femalename']);
+            // $fd->setFemaleNote($val['femalenote']);
+            $tmp[] = array('id'=>$val['femalenumber'],'value'=>$val['femalename']);
+            // $tmp[] = $fd;
         }
 
         return $tmp;
 
     }
 
+    public function setFemaleAllArrayData($data){
+        $tmp=array();
+        foreach($data as $val){
+
+            // $fd = new FemaleData();
+            // $fd->setId($val['id']);
+            // $fd->setFemaleNumber($val['femalenumber']);
+            // $fd->setFemaleName($val['femalename']);
+            // $fd->setFemaleNote($val['femalenote']);
+
+            $tmp[] = array('id'=>$val['femalenumber'],'value'=>$val['femalename']);
+        }
+
+        return $tmp;
+
+    }
 
 }

@@ -49,12 +49,42 @@ $agelist = $qad->getAgeData();
                         xhr.overrideMimeType("text/html;charset=UTF-8");
                     },
                     type: "POST",
-                    url: "restmemberapi.php",
+                    url: "restapibyage.php",
                     data: age
                 }).done(function(data){
-                    console.log('送信済'+data);
-                    $('select[name="female"]').val(data.result);
-                    $('select[name="age"]').val(age);
+                    //nameセレクトボックスの作成方法
+                    //1.現在のnodeを削除する
+                    // $('#female').remove();
+                    //2.受信た配列用のjsonデータでセレクトボックスを作成する
+                    // let optionList = [];
+                    let optionList = JSON.parse(data);
+                    $('#female > option').remove();
+                    var select = $('#female');
+                    for(var i in optionList){
+                        
+                        $("#female").append("<option value=" +optionList[i].id + ">" + optionList[i].value +  "</option>");
+                    }
+                    // $.each(optionList, function(id, value) {
+                    //     var option = $('<option>')
+                    //     .text(obj['id'])
+                    //     .val(obj['value']);
+                    //     select.append(option);
+                    // });
+                    // var keys = Object.keys(optionCntList);
+                    // keys.forEach(function(key, i){
+                    //     /// option要素を動的に生成＆追加
+                    //     var content = this[key];
+                    //     var option = $('<option>')
+                    //     .text(content['id'])
+                    //     .val(content['value']);
+                    //     select.append(option);
+                    //     console.log(option);
+                    // }, optionCntList);
+                    //3.female-groupに作成したセレクトボックスをつける
+
+                    // console.log('送信済'+JSON.parse(data));
+                    // $('select[name="female"]').val(data.result);
+                    // $('select[name="age"]').val(age);
                 }).fail(function(XMLHttpRequest, status, e){
                     console.log(XMLHttpRequest);
                 });
@@ -70,7 +100,7 @@ $agelist = $qad->getAgeData();
                   <div class="female-group">
                       <select id="female" name="female" style="width:200px;height: 30px;font-size:20px;margin-bottom:30px;">
                           <?php foreach($results as $data): ?>
-                              <option value="<?php echo $data->getFemaleNumber(); ?>"><?php echo $data->getFemaleName() ?></option>
+                              <option value="<?php echo $data['id']; ?>"><?php echo $data['value']; ?></option>
                           <?php endforeach; ?>
                       </select>
                       <select id="age" name="age" style="width:200px;height: 30px;font-size:20px;margin-bottom:30px;">
@@ -87,4 +117,3 @@ $agelist = $qad->getAgeData();
     </div>
   </main>
 
-<?php include 'footer.php' ?>
