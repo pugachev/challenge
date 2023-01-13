@@ -52,38 +52,13 @@ $agelist = $qad->getAgeData();
                     url: "restapibyage.php",
                     data: age
                 }).done(function(data){
-                    //nameセレクトボックスの作成方法
-                    //1.現在のnodeを削除する
-                    // $('#female').remove();
-                    //2.受信た配列用のjsonデータでセレクトボックスを作成する
-                    // let optionList = [];
+                    //nameセレクトボックスの作成
                     let optionList = JSON.parse(data);
                     $('#female > option').remove();
                     var select = $('#female');
                     for(var i in optionList){
                         $("#female").append("<option value=" +optionList[i].id + ">" + optionList[i].value +  "</option>");
                     }
-                    // $.each(optionList, function(id, value) {
-                    //     var option = $('<option>')
-                    //     .text(obj['id'])
-                    //     .val(obj['value']);
-                    //     select.append(option);
-                    // });
-                    // var keys = Object.keys(optionCntList);
-                    // keys.forEach(function(key, i){
-                    //     /// option要素を動的に生成＆追加
-                    //     var content = this[key];
-                    //     var option = $('<option>')
-                    //     .text(content['id'])
-                    //     .val(content['value']);
-                    //     select.append(option);
-                    //     console.log(option);
-                    // }, optionCntList);
-                    //3.female-groupに作成したセレクトボックスをつける
-
-                    // console.log('送信済'+JSON.parse(data));
-                    // $('select[name="female"]').val(data.result);
-                    // $('select[name="age"]').val(age);
                 }).fail(function(XMLHttpRequest, status, e){
                     console.log(XMLHttpRequest);
                 });
