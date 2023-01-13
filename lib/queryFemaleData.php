@@ -23,6 +23,12 @@ class QueryFemaleData extends connect{
         return $this->setFemaleAllData($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
+    public function getFemaleDataByAge($age){
+        $stmt = $this->dbh->prepare("SELECT * FROM female where femaleage=".$age);
+        $stmt->execute();
+        return $this->setFemaleAllData($stmt->fetchAll(PDO::FETCH_ASSOC));
+    }
+
     public function setFemaleAllData($data){
         $tmp=array();
         foreach($data as $val){

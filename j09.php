@@ -39,6 +39,27 @@ $agelist = $qad->getAgeData();
             $(div).insertAfter($('.female-group').eq(-1));     
         });
 
+        $('#age').change(function(){
+            let age = $('select[name="age"] option:selected').val();
+            var data = {
+                "age": age
+            }
+            $.ajax({
+                    beforeSend: function(xhr){
+                        xhr.overrideMimeType("text/html;charset=UTF-8");
+                    },
+                    type: "POST",
+                    url: "restmemberapi.php",
+                    data: age
+                }).done(function(data){
+                    console.log('送信済'+data);
+                    $('select[name="female"]').val(data.result);
+                    $('select[name="age"]').val(age);
+                }).fail(function(XMLHttpRequest, status, e){
+                    console.log(XMLHttpRequest);
+                });
+        });
+
     });
 </script>
   <main>

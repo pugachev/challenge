@@ -42,7 +42,7 @@
         </tr>
         <tr>
           <td><a href="http://localhost/challenge/j09.php" target="_blank">selectbox選択肢動的変更</a></td>
-          <td>selectboxの選択の順番で選択肢の内容が変化する</td>
+          <td>年齢を選ぶとそれに対応する人がでる</td>
         </tr>
       </table>
     </div>

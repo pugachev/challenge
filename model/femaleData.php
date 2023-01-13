@@ -6,6 +6,7 @@ class FemaleData{
     private $femalenumber = null;
     private $femalename = null;
     private $femalnote = null;
+    private $femalage = null;
 
     public function getId(){
         return $this->id;
@@ -23,6 +24,10 @@ class FemaleData{
         return $this->femalnote;
     }
 
+    public function getFemaleAge(){
+        return $this->femalage;
+    }
+
     public function setId($val){
         $this->id = $val;
     }
@@ -37,5 +42,9 @@ class FemaleData{
 
     public function setFemaleNote($val){
         $this->femalnote = $val;
+    }
+
+    public function setFemaleAge($val){
+        $this->femalage = $val;
     }
 }

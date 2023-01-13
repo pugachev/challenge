@@ -11,3 +11,10 @@ https://chaika.hatenablog.com/entry/2017/07/01/080000
 
 連想配列は{}
 配列は[]
+
+外部キーを設定する時に以下のエラーが発生する場合
+Foreign key constraint is incorrectly formed
+対象のテーブルの主キーならば必然的にユニークなので問題はなし。
+そうでないカラムはUNIQUEを設定する必要がある
+
+https://qiita.com/ymzkjpx/items/a4dc01c2a7da32bb8712
