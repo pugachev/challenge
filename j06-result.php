@@ -164,7 +164,7 @@ if (isset($rcv->bijintext) && !empty($rcv->bijintext)) {
                     <div class="female-group">
                         <select id="female" name="female" style="width:200px;height: 30px;font-size:20px;margin-bottom:30px;">
                             <?php foreach($results as $data): ?>
-                                <option id="<?php echo $data->getFemaleNumber(); ?>" value="<?php echo $data->getFemaleNumber(); ?>"><?php echo $data->getFemaleName() ?></option>
+                              <option value="<?php echo $data['id']; ?>"><?php echo $data['value']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

@@ -61,7 +61,6 @@ $agelist = $qad->getAgeData();
                     $('#female > option').remove();
                     var select = $('#female');
                     for(var i in optionList){
-                        
                         $("#female").append("<option value=" +optionList[i].id + ">" + optionList[i].value +  "</option>");
                     }
                     // $.each(optionList, function(id, value) {
