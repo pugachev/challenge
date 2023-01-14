@@ -39,8 +39,23 @@ $agelist = $qad->getAgeData();
             $(div).insertAfter($('.female-group').eq(-1));     
         });
 
-        $('#age').change(function(){
-            let age = $('select[name="age"] option:selected').val();
+        //すべての年代セレクトボックスの状態を感知
+        $('select[name*=age]').change(function(){
+            //現在の最後の1文字を切り出す
+            let lastnum = $(this)[0].name.slice(-1);
+            let tgtselectage ='';
+            let tgtselectname = '';
+            let age = '';
+            if(lastnum >=1){
+                tgtselectage ='age'+lastnum;
+                tgtselectname = 'female'+lastnum;
+                age = $('select[name="'+tgtselectage+'"] option:selected').val();
+            }else{
+                tgtselectage ='age';
+                tgtselectname = 'female';
+                age = $('select[name="age"] option:selected').val();
+            }
+
             var data = {
                 "age": age
             }
@@ -54,14 +69,16 @@ $agelist = $qad->getAgeData();
                 }).done(function(data){
                     //nameセレクトボックスの作成
                     let optionList = JSON.parse(data);
-                    $('#female > option').remove();
-                    var select = $('#female');
+                    let tmp = '#'+tgtselectname+' > option';
+                    $(tmp).remove();
+                    var select = $('#'+tgtselectname);
                     for(var i in optionList){
-                        $("#female").append("<option value=" +optionList[i].id + ">" + optionList[i].value +  "</option>");
+                        $('#'+tgtselectname).append("<option value=" +optionList[i].id + ">" + optionList[i].value +  "</option>");
                     }
                 }).fail(function(XMLHttpRequest, status, e){
                     console.log(XMLHttpRequest);
                 });
+
         });
 
     });

@@ -46,3 +46,7 @@ let senddatajson=JSON.parse(tgt);
 senddatajson.forEach((e)=>{
 	console.log(e.id+'   '+e.value);
 });
+
+//jQuery部分一致
+https://marketing-web.hatenablog.com/entry/jquery_attribute_selector
+
