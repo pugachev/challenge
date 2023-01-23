@@ -2,6 +2,7 @@
 include __DIR__.'/lib/connect.php';
 include __DIR__.'/lib/queryFemaleData.php';
 include __DIR__.'/lib/queryAgeData.php';
+include __DIR__.'/lib/queryFinancialData.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
