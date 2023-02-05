@@ -12,8 +12,6 @@ $features = "";
 $bijintext = "";
 //selectboxの受信
 $rcvfemales = [];
-// var_dump($_POST);
-// die();
 foreach($_POST as $key => $value){
   if( preg_match('/female/',$key)){
     $rcvfemales[] = array($key,$value);
