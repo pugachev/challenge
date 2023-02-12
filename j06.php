@@ -137,10 +137,10 @@ $arraylist = [0=>"Dカップ以上",1=>"美脚",2=>"スレンダー",3=>"その�
           dataType : "json"
         }).done(function(data){
           console.log('送信済');
-          location.href = 'http://localhost/challenge/j06-result.php';
+          location.href = './j06-result.php';
         }).fail(function(XMLHttpRequest, status, e){
           console.log(XMLHttpRequest);
-          location.href = 'http://localhost/challenge/j06-result.php';
+          location.href = './j06-result.php';
         });
       });
     });
