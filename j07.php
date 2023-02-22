@@ -68,11 +68,17 @@ $results = $qfd->getFemaleData();
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script>
     $(function() {
+        let tmp = 'CoCo壱カレー';
+        test(`${tmp}`+'を食べるぞー');
+
         var col_no = $("table th").index(this);
         // $("td:contains('東京都')").parent('tr').css('fontSize','1.1em');
         //2カラム目の面積を太字にする
         $('table tr').eq(2).children('td').eq(1).css('fontSize','1.5em');
     });
+    function test(tmp){
+        console.log(tmp);
+    }
 </script>
   <main>
     <div class="container">
