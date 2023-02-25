@@ -53,7 +53,7 @@
           <td>会計番号でグループするか全行だすか</td>
         </tr>
         <tr>
-          <td><a href="../test.php" target="_blank">グラフ出力実験</a></td>
+          <td><a href="./j12.php" target="_blank">グラフ出力実験</a></td>
           <td>jpgraphで折れ線グラフを出力する</td>
         </tr>
       </table>
