@@ -116,5 +116,5 @@ footer {
   bottom: 0; /*下に固定*/
   width: 100%;
   font-size: 30px;
-  z-index: -1;
+  z-index: 1000;
 }
