@@ -56,6 +56,10 @@
           <td><a href="./j12.php" target="_blank">グラフ出力実験</a></td>
           <td>jpgraphで折れ線グラフを出力する</td>
         </tr>
+        <tr>
+          <td><a href="./j13.php" target="_blank">array_merge実験</a></td>
+          <td>keyの採番を中心に研究</td>
+        </tr>
       </table>
     </div>
   </main>
