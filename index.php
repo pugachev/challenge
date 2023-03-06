@@ -60,6 +60,10 @@
           <td><a href="./j13.php" target="_blank">array_merge実験</a></td>
           <td>keyの採番を中心に研究</td>
         </tr>
+        <tr>
+          <td><a href="./j14.php" target="_blank">array_searchとin_arrayの差異</a></td>
+          <td>ヒットした場合を中心に研究</td>
+        </tr>
       </table>
     </div>
   </main>
