@@ -35,9 +35,9 @@ Array
 )
 
 (3) +=演算子もそのまま(再採番はされない)
-$hoge += array(1=>'馬場典子');
-$hoge += $hoge + array(2=>'良原安美');
-$hoge += $hoge + array(3=>'堤礼実');
+$hoge = array(1=>'馬場典子');
+$hoge += array(2=>'良原安美');
+$hoge += array(3=>'堤礼実');
 
 Array
 (

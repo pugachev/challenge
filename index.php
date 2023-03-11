@@ -64,6 +64,10 @@
           <td><a href="./j14.php" target="_blank">array_searchとin_arrayの差異</a></td>
           <td>ヒットした場合を中心に研究</td>
         </tr>
+        <tr>
+          <td><a href="./j15.php" target="_blank">implodeとexplodeの使い方の違い</a></td>
+          <td>文字列←→配列の変換について</td>
+        </tr>
       </table>
     </div>
   </main>
