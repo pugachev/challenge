@@ -50,3 +50,6 @@ senddatajson.forEach((e)=>{
 //jQuery部分一致
 https://marketing-web.hatenablog.com/entry/jquery_attribute_selector
 
+
+//プログレスバーのライブラリ
+https://kimmobrunfeldt.github.io/progressbar.js/
