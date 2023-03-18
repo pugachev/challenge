@@ -53,3 +53,12 @@ https://marketing-web.hatenablog.com/entry/jquery_attribute_selector
 
 //プログレスバーのライブラリ
 https://kimmobrunfeldt.github.io/progressbar.js/
+
+//改行問題
+https://qiita.com/akane_kato/items/2b1385574e1a1babdde1
+https://rishuntrading.co.jp/blog/programing/css_overflow-wrap_break-word_disenable/
+
+// $("#tgt").css('word-break','break-all');
+$("#tgt").css('word-break','break-word');
+// $("#tgt").css('width','300px');
+// $("#tgt").css('max-width','100%');

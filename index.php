@@ -96,6 +96,10 @@
           <td><a href="./j22.php" target="_blank">テーブル検索</a></td>
           <td>ソースコード記載</td>
         </tr>
+        <tr>
+          <td><a href="./j23.php" target="_blank">長文折り曲げ</a></td>
+          <td>wrapしてみる</td>
+        </tr>
       </table>
     </div>
   </main>
