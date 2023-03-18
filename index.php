@@ -100,6 +100,10 @@
           <td><a href="./j23.php" target="_blank">長文折り曲げ</a></td>
           <td>wrapしてみる</td>
         </tr>
+        <tr>
+          <td><a href="./j24.php" target="_blank">array_mapを使ってみた</a></td>
+          <td>callbackを埋め込んで要素それぞれに適応できる</td>
+        </tr>
       </table>
     </div>
   </main>
