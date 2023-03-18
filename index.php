@@ -80,8 +80,20 @@
           <td><a href="./j18.php" target="_blank">progressbar.jsの使い方</a></td>
           <td>設定の仕方について</td>
         </tr>
+        <tr>
+          <td><a href="./j19.php" target="_blank">chart.jsの使い方</a></td>
+          <td>導入編</td>
+        </tr>
+        <tr>
+          <td><a href="./j20.php" target="_blank">chart.jsの使い方(ソースコード)</a></td>
+          <td>ソースコード記載</td>
+        </tr>
+        <tr>
+          <td><a href="./j21.php" target="_blank">PHP←→Javascript データ受け渡し</a></td>
+          <td>ソースコード記載</td>
+        </tr>
       </table>
     </div>
   </main>
 
-<?php include 'footer.php' ?>
+<!-- <?php include 'footer.php' ?> -->
