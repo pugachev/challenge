@@ -92,6 +92,10 @@
           <td><a href="./j21.php" target="_blank">PHP←→Javascript データ受け渡し</a></td>
           <td>ソースコード記載</td>
         </tr>
+        <tr>
+          <td><a href="./j22.php" target="_blank">テーブル検索</a></td>
+          <td>ソースコード記載</td>
+        </tr>
       </table>
     </div>
   </main>

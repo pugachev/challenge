@@ -70,7 +70,7 @@ $results = $qfd->getFemaleData();
     $(function() {
         let tmp = 'CoCo壱カレー';
         test(`${tmp}`+'を食べるぞー');
-
+        test(tmp+'を食べるぞー');
         var col_no = $("table th").index(this);
         // $("td:contains('東京都')").parent('tr').css('fontSize','1.1em');
         //2カラム目の面積を太字にする
