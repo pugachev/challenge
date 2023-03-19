@@ -62,3 +62,7 @@ https://rishuntrading.co.jp/blog/programing/css_overflow-wrap_break-word_disenab
 $("#tgt").css('word-break','break-word');
 // $("#tgt").css('width','300px');
 // $("#tgt").css('max-width','100%');
+
+//要素のとりかた
+chromeで「JSのパスをコピー」を取得
+$("body > main > div > div > div > table > tbody > tr:nth-child(3) > td:nth-child(3)").css('color','red')
