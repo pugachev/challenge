@@ -66,3 +66,6 @@ $("#tgt").css('word-break','break-word');
 //要素のとりかた
 chromeで「JSのパスをコピー」を取得
 $("body > main > div > div > div > table > tbody > tr:nth-child(3) > td:nth-child(3)").css('color','red')
+
+//CSS疑似要素について
+https://cotodama.co/css-pseudo/

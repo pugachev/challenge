@@ -104,6 +104,10 @@
           <td><a href="./j24.php" target="_blank">array_mapを使ってみた</a></td>
           <td>callbackを埋め込んで要素それぞれに適応できる</td>
         </tr>
+        <tr>
+          <td><a href="./j25.php" target="_blank">ChatGPTの作ったテーブル</a></td>
+          <td>レスポンシブ化してるそうな</td>
+        </tr>
       </table>
     </div>
   </main>
