@@ -28,15 +28,15 @@ echo $arrObj['stdVal2'].PHP_EOL;
 echo PHP_EOL;
 
 echo "プロパティ名の変数化".PHP_EOL;
-$key1 = "stdVal1";//
+$key1 = "stdVal1";//プロパティ名を変数に格納する
 $key2 = "stdVal2"; 
-echo $stdObj->$key1.PHP_EOL;
+echo $stdObj->$key1.PHP_EOL;//変数を参照する(プロパティ名が格納されている)
 echo $stdObj->$key2.PHP_EOL;
 
 echo PHP_EOL;
 
 echo "プロパティの追加".PHP_EOL;
-$stdObj->stdVal3 = "プロパティの追加";
+$stdObj->stdVal3 = "プロパティの追加";//後からプロパティを追加する
 echo $stdObj->stdVal1.PHP_EOL;
 echo $stdObj->stdVal2.PHP_EOL;
 echo $stdObj->stdVal3.PHP_EOL;
