@@ -108,6 +108,10 @@
           <td><a href="./j25.php" target="_blank">ChatGPTの作ったテーブル</a></td>
           <td>レスポンシブ化してるそうな</td>
         </tr>
+        <tr>
+          <td><a href="./j26.php" target="_blank">stdClassを調べる(1)</a></td>
+          <td>stdClassの基本使用</td>
+        </tr>
       </table>
     </div>
   </main>
