@@ -112,6 +112,10 @@
           <td><a href="./j26.php" target="_blank">stdClassを調べる(1)</a></td>
           <td>stdClassの基本使用</td>
         </tr>
+        <tr>
+          <td><a href="./j27.php" target="_blank">multidatepickerの使い方</a></td>
+          <td>フルカレンダーを作る</td>
+        </tr>
       </table>
     </div>
   </main>
