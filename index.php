@@ -116,6 +116,10 @@
           <td><a href="./j27.php" target="_blank">multidatepickerの使い方</a></td>
           <td>フルカレンダーを作る</td>
         </tr>
+        <tr>
+          <td><a href="./j28.php" target="_blank">Google Photoの使い方</a></td>
+          <td>認証してみる</td>
+        </tr>
       </table>
     </div>
   </main>
