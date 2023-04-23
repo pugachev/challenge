@@ -120,6 +120,10 @@
           <td><a href="./j28.php" target="_blank">Google Photoの使い方</a></td>
           <td>認証してみる</td>
         </tr>
+        <tr>
+          <td><a href="./j29.php" target="_blank">連想配列の追加方法</a></td>
+          <td>シンプルに見直してみた</td>
+        </tr>
       </table>
     </div>
   </main>
