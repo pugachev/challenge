@@ -128,6 +128,10 @@
           <td><a href="./j30.php" target="_blank">カレンダー</a></td>
           <td>シンプルにカレンダー</td>
         </tr>
+        <tr>
+          <td><a href="./j31.php" target="_blank">カレンダー(応用)</a></td>
+          <td>応用したカレンダー</td>
+        </tr>
       </table>
     </div>
   </main>
