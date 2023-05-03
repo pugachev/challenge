@@ -14,6 +14,7 @@ include __DIR__.'/lib/queryFinancialData.php';
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/colorbox.css">
+  <link rel="stylesheet" href="css/calendar.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
   <script src="js/jquery.colorbox-min.js"></script> 
 </head>
@@ -43,12 +44,12 @@ include __DIR__.'/lib/queryFinancialData.php';
           </li>
           <li>
             <a href="#">
-              <img
-                src="img/photos.png"
-                alt="写真アイコン"
-                width="20"
-                height="20">
-            </a>
+            <img
+              src="img/photos.png"
+              alt="写真アイコン"
+              width="20"
+              height="20">
+          </a>
           </li>
         </ul>
       </div>

@@ -124,6 +124,10 @@
           <td><a href="./j29.php" target="_blank">連想配列の追加方法</a></td>
           <td>シンプルに見直してみた</td>
         </tr>
+        <tr>
+          <td><a href="./j30.php" target="_blank">カレンダー</a></td>
+          <td>シンプルにカレンダー</td>
+        </tr>
       </table>
     </div>
   </main>
