@@ -101,6 +101,7 @@ function generate_year_range(start, end) {
                 cell.setAttribute("data-month", month + 1);
                 cell.setAttribute("data-year", year);
                 cell.setAttribute("data-month_name", months[month]);
+                cell.onclick=function(){alert(year+'-'+(month+1)+'-'+date);};
                 cell.className = "date-picker";
                 cell.innerHTML = "<span>" + date + "</span>";
   

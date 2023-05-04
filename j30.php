@@ -58,5 +58,4 @@
             </div>
         </div>
   </main>
-  <script src="js/calendar.js" type="text/javascript"></script>
 <?php include 'footer.php' ?>

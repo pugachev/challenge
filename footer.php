@@ -1,6 +1,6 @@
 <footer>
     <small>(c) 池TECH</small>
-  </footer>
-  
+</footer>
+<script src="js/calendar.js" type="text/javascript"></script>
 </body>
 </html>
