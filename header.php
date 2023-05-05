@@ -17,8 +17,10 @@ include __DIR__.'/lib/queryFinancialData.php';
   <link rel="stylesheet" href="css/calendar.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/s_calendar.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
   <script src="js/jquery.colorbox-min.js"></script> 
+  <script src="js/jquery.minicalendar.js"></script> 
 </head>
 <body>
   <header>
