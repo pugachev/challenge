@@ -136,6 +136,10 @@
           <td><a href="./j32.php" target="_blank">カレンダー(流用)</a></td>
           <td>流用したカレンダー</td>
         </tr>
+        <tr>
+          <td><a href="./j33.php" target="_blank">ファイルアップロード(jQuery)</a></td>
+          <td>ファイルアップロード(jQuery)</td>
+        </tr>
       </table>
     </div>
   </main>
