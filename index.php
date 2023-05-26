@@ -140,6 +140,14 @@
           <td><a href="./j33.php" target="_blank">ファイルアップロード(jQuery)</a></td>
           <td>ファイルアップロード(jQuery)</td>
         </tr>
+        <tr>
+          <td><a href="./j34.php" target="_blank">ファイルアップロード(混合)</a></td>
+          <td>ファイルアップロード(混合)</td>
+        </tr>
+        <tr>
+          <td><a href="./j35.php" target="_blank">ファイルアップロード(混合2)</a></td>
+          <td>ファイルアップロード(混合2)</td>
+        </tr>
       </table>
     </div>
   </main>
