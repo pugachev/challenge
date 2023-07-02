@@ -19,8 +19,6 @@
     background-color: #000;
     color: #fff;
     padding: 5px;
-    top: 100%;
-    left: 0;
   }
 </style>
 <script>
@@ -38,10 +36,13 @@
           });
 
           document.querySelector('button').addEventListener('click', function() {
+            let textBoxRect = $('#result')[0].getBoundingClientRect();
             // ツールチップを表示する処理をここに記述する
             var tooltip = document.createElement('div');
             tooltip.innerText = this.getAttribute('title');
             tooltip.classList.add('tooltip');
+            tooltip.style.left = textBoxRect.left + 10 + "px";
+            tooltip.style.top = textBoxRect.top - 20 + "px";
             this.appendChild(tooltip);
             return false;
           });
@@ -57,7 +58,7 @@
         <div class="wrap">
             <div class="content">
               <div class="btn-container">
-                <button id="tgt" title="これはツールチップです">Copied</button>
+                <button id="tgt" title="Copied">Copied</button>
                 <input type="text" id="result">
               </div>
             </div> 

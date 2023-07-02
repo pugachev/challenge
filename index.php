@@ -156,6 +156,10 @@
           <td><a href="./j37.php" target="_blank">ツールチップ(2)</a></td>
           <td>ボタンクリック時にツールチップを表示(2)</td>
         </tr>
+        <tr>
+          <td><a href="./j38.php" target="_blank">ツールチップ(3)</a></td>
+          <td>ボタンクリック時にツールチップを表示(3)</td>
+        </tr>
       </table>
     </div>
   </main>
