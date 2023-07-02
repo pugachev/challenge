@@ -148,6 +148,14 @@
           <td><a href="./j35.php" target="_blank">ファイルアップロード(混合2)</a></td>
           <td>ファイルアップロード(混合2)</td>
         </tr>
+        <tr>
+          <td><a href="./j36.php" target="_blank">ツールチップ</a></td>
+          <td>ボタンクリック時にツールチップを表示</td>
+        </tr>
+        <tr>
+          <td><a href="./j37.php" target="_blank">ツールチップ(2)</a></td>
+          <td>ボタンクリック時にツールチップを表示(2)</td>
+        </tr>
       </table>
     </div>
   </main>
