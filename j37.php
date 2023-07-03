@@ -28,8 +28,8 @@
         tooltip.innerText = 'Copied';
         tooltip.classList.add('tooltip');
         tooltip.onclick="alert('Hello')";
-        tooltip.style.left = result.left + 10 + "px";
-        tooltip.style.top = result.top - 35 + "px";
+        tooltip.style.left = result.getBoundingClientRect().left + 10 + "px";
+        tooltip.style.top = result.getBoundingClientRect().top - 35 + "px";
         return tooltip;
     }
 
@@ -41,20 +41,16 @@
                 $('.tooltip').css('display', 'none');
               }
             });
-
             $('#tgt1').click(function(){
-              let textBoxRect = $('#result1')[0].getBoundingClientRect();
-              $('#result1')[0].before(maketooltip(textBoxRect));
+              $('#result1')[0].before(maketooltip($('#result1')[0]));
               return false;
             });
             $('#tgt2').click(function(){
-              let textBoxRect = $('#result2')[0].getBoundingClientRect();
-              $('#result2')[0].before(maketooltip(textBoxRect));
+              $('#result2')[0].before(maketooltip($('#result2')[0]));
               return false;
             });
             $('#tgt3').click(function(){
-              let textBoxRect = $('#result3')[0].getBoundingClientRect();
-              $('#result3')[0].before(maketooltip(textBoxRect));
+              $('#result3')[0].before(maketooltip($('#result3')[0]));
               return false;
             });
     });
