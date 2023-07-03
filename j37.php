@@ -24,33 +24,30 @@
 <script>
     $(document).ready(function(){
 
-  // クリックイベントを監視します
-  $(document).on("click", function(event) {
-            // クリックされた要素を取得します
-            var targetElement = $(event.target);
+            // クリックイベントを監視します
+            $(document).on("click", function(event) {
+              // クリックされた要素を取得します
+              var targetElement = $(event.target);
 
-            // クリックされた要素がツールチップ要素自体でない場合、ツールチップを非表示にします
-            if (!targetElement.is($('.tooltip')) && !targetElement.is($('#tgt'))) {
-              $('.tooltip').css('display', 'none');
-            }
-          });
+              // クリックされた要素がツールチップ要素自体でない場合、ツールチップを非表示にします
+              if (!targetElement.is($('.tooltip')) && !targetElement.is($('#tgt'))) {
+                $('.tooltip').css('display', 'none');
+              }
+            });
 
-          document.querySelector('button').addEventListener('click', function() {
-            let textBoxRect = $('#result')[0].getBoundingClientRect();
-            // ツールチップを表示する処理をここに記述する
-            var tooltip = document.createElement('div');
-            tooltip.innerText = this.getAttribute('title');
-            tooltip.classList.add('tooltip');
-            tooltip.style.left = textBoxRect.left + 10 + "px";
-            tooltip.style.top = textBoxRect.top - 20 + "px";
-            this.appendChild(tooltip);
-            return false;
-          });
 
-          // $(document).on('touchend click', function(e) {
-          //       $('.tooltip').css('display', 'none');
-          //       console.log(0);
-          //   });
+            $('#tgt').click(function(){
+              let textBoxRect = $('#result')[0].getBoundingClientRect();
+              // ツールチップを表示する処理をここに記述する
+              var tooltip = document.createElement('div');
+              tooltip.innerText = this.getAttribute('title');
+              tooltip.classList.add('tooltip');
+              tooltip.style.left = textBoxRect.left + 10 + "px";
+              tooltip.style.top = textBoxRect.top - 20 + "px";
+              this.appendChild(tooltip);
+              return false;
+            });
+
     });
 </script>
   <main>
