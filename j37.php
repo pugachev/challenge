@@ -16,38 +16,47 @@
   }
   .tooltip {
     position: absolute;
-    background-color: #000;
+    background-color: #BDBDB7;
     color: #fff;
     padding: 5px;
   }
 </style>
 <script>
+    function maketooltip(result){
+        // ツールチップ作成
+        let tooltip = document.createElement('div');
+        tooltip.innerText = 'Copied';
+        tooltip.classList.add('tooltip');
+        tooltip.onclick="alert('Hello')";
+        tooltip.style.left = result.left + 10 + "px";
+        tooltip.style.top = result.top - 35 + "px";
+        return tooltip;
+    }
+
     $(document).ready(function(){
-
-            // クリックイベントを監視します
             $(document).on("click", function(event) {
-              // クリックされた要素を取得します
               var targetElement = $(event.target);
-
-              // クリックされた要素がツールチップ要素自体でない場合、ツールチップを非表示にします
-              if (!targetElement.is($('.tooltip')) && !targetElement.is($('#tgt'))) {
+              console.log(targetElement);
+              if (!targetElement.is($('#tgt1')) || !targetElement.is($('#tgt2')) || !targetElement.is($('#tgt3')) ) {
                 $('.tooltip').css('display', 'none');
               }
             });
 
-
-            $('#tgt').click(function(){
-              let textBoxRect = $('#result')[0].getBoundingClientRect();
-              // ツールチップを表示する処理をここに記述する
-              var tooltip = document.createElement('div');
-              tooltip.innerText = this.getAttribute('title');
-              tooltip.classList.add('tooltip');
-              tooltip.style.left = textBoxRect.left + 10 + "px";
-              tooltip.style.top = textBoxRect.top - 20 + "px";
-              this.appendChild(tooltip);
+            $('#tgt1').click(function(){
+              let textBoxRect = $('#result1')[0].getBoundingClientRect();
+              $('#result1')[0].before(maketooltip(textBoxRect));
               return false;
             });
-
+            $('#tgt2').click(function(){
+              let textBoxRect = $('#result2')[0].getBoundingClientRect();
+              $('#result2')[0].before(maketooltip(textBoxRect));
+              return false;
+            });
+            $('#tgt3').click(function(){
+              let textBoxRect = $('#result3')[0].getBoundingClientRect();
+              $('#result3')[0].before(maketooltip(textBoxRect));
+              return false;
+            });
     });
 </script>
   <main>
@@ -55,9 +64,20 @@
         <div class="wrap">
             <div class="content">
               <div class="btn-container">
-                <button id="tgt" title="Copied">Copied</button>
-                <input type="text" id="result">
+                <button id="tgt1">Copiedボタン1</button>
+                <input type="text" id="result1">
               </div>
+              <br>
+              <div class="btn-container">
+                <button id="tgt2">Copiedボタン2</button>
+                <input type="text" id="result2">
+              </div>
+              <br>
+              <div class="btn-container">
+                <button id="tgt3">Copiedボタン3</button>
+                <input type="text" id="result3">
+              </div>
+              <br>
             </div> 
         </div>
     </div>
