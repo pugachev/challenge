@@ -75,21 +75,26 @@ $results = $qfd->getFemaleData();
         // $("td:contains('東京都')").parent('tr').css('fontSize','1.1em');
         //2カラム目の面積を太字にする
         $('table tr').eq(2).children('td').eq(1).css('fontSize','1.5em');
-        $('table tr').eq(2).children('td').eq(3).before(maketooltip($('table tr').eq(2).children('td').eq(3)[0]));
+        // $('table tr').eq(2).children('td').eq(3).before(maketooltip($('table tr').eq(2).children('td').eq(3)[0]));
+
+        $('table tr').eq(2).children('td').eq(3).click(function(){
+            // ここにクリックしたら発火する処理を記述する
+            alert('Hello World!');
+        });
     });
     function test(tmp){
         console.log(tmp);
     }
-    function maketooltip(result){
-        // ツールチップ作成
-        let tooltip = document.createElement('div');
-        tooltip.innerText = 'Copied';
-        tooltip.classList.add('tooltip');
-        tooltip.onclick="alert('Hello')";
-        tooltip.style.left = result.getBoundingClientRect().left + 10 + "px";
-        tooltip.style.top = result.getBoundingClientRect().top - 35 + "px";
-        return tooltip;
-    }
+    // function maketooltip(result){
+    //     // ツールチップ作成
+    //     let tooltip = document.createElement('div');
+    //     tooltip.innerText = 'Copied';
+    //     tooltip.classList.add('tooltip');
+    //     tooltip.onclick="alert('Hello')";
+    //     tooltip.style.left = result.getBoundingClientRect().left + 10 + "px";
+    //     tooltip.style.top = result.getBoundingClientRect().top - 35 + "px";
+    //     return tooltip;
+    // }
 </script>
   <main>
     <div class="container">
