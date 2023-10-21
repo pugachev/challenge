@@ -134,6 +134,23 @@ $text_y = $org_y - $height - $font_size * 2;
 imagettftext($image, $font_size, 0, $text_x, $text_y, $text_color, $font, $title);
  
 header('Content-type: image/png');
-imagepng($image);
+ob_start();
+imagejpeg($image, null, 90);
+$content = base64_encode(ob_get_contents());
+ob_end_clean();
  
 imagedestroy($image);
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<img src="data:image/jpeg;base64,<?php echo $content;?>" alt="sample" />
+
+</body>
+</html>

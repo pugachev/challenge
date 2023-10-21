@@ -164,6 +164,10 @@
           <td><a href="./j39.php" target="_blank">折れ線グラフ</a></td>
           <td>PHPで折れ線グラフを描く</td>
         </tr>
+        <tr>
+          <td><a href="./j40.php" target="_blank">折れ線グラフ(Chart.js)</a></td>
+          <td>PHPで折れ線グラフを描く(Chart.js)</td>
+        </tr>
       </table>
     </div>
   </main>
