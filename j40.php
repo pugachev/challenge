@@ -1,8 +1,15 @@
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-</head>
+<?php include 'header.php' ?>
 <body>
-    <canvas id="lineChart"></canvas>
+<main>
+    <div class="container">
+      <div class="wrap">
+          <div class="content">
+            <canvas id="lineChart"></canvas>
+          </div>
+      </div>
+    </div>
+  </main>
+    
     <script>
         let lineCtx = document.getElementById("lineChart");
         // 線グラフの設定
@@ -32,7 +39,7 @@
                 suggestedMin: 0,
                 suggestedMax: 60,
                 ticks: {
-                  stepSize: 20,
+                  stepSize: 30,
                 }
               }
             },
@@ -41,3 +48,4 @@
         let lineChart = new Chart(lineCtx, lineConfig);
     </script>
 </body>
+<?php include 'footer.php' ?>
