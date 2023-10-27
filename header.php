@@ -55,6 +55,7 @@ function getFileUpload($file_data, $target_path, $upload_name = '')
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
   <script src="js/jquery.colorbox-min.js"></script> 
   <script src="js/jquery.minicalendar.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <body>
   <header>
