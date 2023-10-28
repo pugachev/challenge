@@ -1,111 +1,51 @@
 <?php include 'header.php' ?>
-<?php
-
-?>
-<style>
-* {
-  box-sizing: border-box;
-}
+<body>
+<main>
+    <div class="container">
+      <div class="wrap">
+          <div class="content">
+            <canvas id="lineChart"></canvas>
+          </div>
+      </div>
+    </div>
+  </main>
     
-ul,
-li {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-}
-
-.tab {
-  width: 500px;
-  max-width: 100%;
-  margin: auto;
-}
-
-.tab-menu {
-  display: flex;
-}
-
-.tab-item {
-  text-align: center;
-  padding: 10px 0;
-  cursor: pointer;
-  
-  /* widthを同じ比率で分けあう */
-  flex-grow: 1;
-
-  /* 下線以外をつける */
-  border-top: 1px solid skyblue;
-  border-left: 1px solid skyblue;
-  border-right: 1px solid skyblue;
-}
-    
-.tab-item:not(:first-child) {
-  border-left: none;
-}
-
-/* アクティブなタブはデザインを変えて選択中であることが解るようにする */
-.tab-item.active {
-  background: red;
-  color: white;
-}
-
-.tab-box {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid skyblue;
-}
-    
-/* コンテンツは原則非表示 */
-.tab-content {
-  display: none;
-  font-size: 40px;
-}
-
-/* .showがついたコンテンツのみ表示 */
-.tab-content.show {
-  display: block;
-}
-</style>
-<script>
-    $(document).ready(function(){
-      $('.tab-item').click(function() {
-        //現在activeが付いているクラスからactiveを外す
-        $('.active').removeClass('active');
-
-        //クリックされたタブメニューにactiveクラスを付与。
-        $(this).addClass('active');
-
-        //一旦showクラスを外す
-        $('.show').removeClass('show');
-
-        //クリックしたタブのインデックス番号取得
-        const index = $(this).index();
-
-        //タブのインデックス番号と同じコンテンツにshowクラスをつけて表示する
-        $('.tab-content').eq(index).addClass('show');
-      });
-    });
-</script>
-
-<div class="tab">
- 
-  <!--  タブメニュー  -->
-  <ul class="tab-menu">
-    <li class="tab-item active">タブ1</li>
-    <li class="tab-item">タブ2</li>
-    <li class="tab-item">タブ3</li>
-  </ul><!-- /.tab_menu -->
-  
-  <!--  コンテンツ  -->
-  <div class="tab-box">
-    <div class="tab-content show">コンテンツ1</div>
-    <div class="tab-content">コンテンツ2</div>
-    <div class="tab-content">コンテンツ3</div>
-  </div>
-
-</div>
+    <script>
+        let lineCtx = document.getElementById("lineChart");
+        // 線グラフの設定
+        let lineConfig = {
+          type: 'line',
+          data: {
+            // ※labelとデータの関係は得にありません
+            labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            datasets: [{
+              label: 'Red',
+              data: [20, 35, 40, 30, 45, 35, 40],
+              borderColor: '#f88',
+            }, {
+              label: 'Green',
+              data: [20, 15, 30, 25, 30, 40, 35],
+              borderColor: '#484',
+            }, {
+              label: 'Blue',
+              data: [30, 25, 10, 5, 25, 30, 20],
+              borderColor: '#48f',
+            }],
+          },
+          options: {
+            scales: {
+              // Y軸の最大値・最小値、目盛りの範囲などを設定する
+              y: {
+                suggestedMin: 0,
+                suggestedMax: 60,
+                ticks: {
+                  stepSize: 30,
+                }
+              }
+            },
+          },
+        };
+        let lineChart = new Chart(lineCtx, lineConfig);
+    </script>
+</body>
 <?php include 'footer.php' ?>

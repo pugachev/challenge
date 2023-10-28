@@ -172,6 +172,10 @@
           <td><a href="./j41.php" target="_blank">タブテーブル</a></td>
           <td>タブテーブル</td>
         </tr>
+        <tr>
+          <td><a href="./j42.php" target="_blank">棒グラフ</a></td>
+          <td>棒グラフ</td>
+        </tr>
       </table>
     </div>
   </main>
