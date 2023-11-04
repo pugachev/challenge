@@ -176,6 +176,10 @@
           <td><a href="./j42.php" target="_blank">棒グラフ</a></td>
           <td>棒グラフ</td>
         </tr>
+        <tr>
+          <td><a href="./j43.php" target="_blank">棒グラフ(クリックイベント)</a></td>
+          <td>棒グラフ</td>
+        </tr>
       </table>
     </div>
   </main>
