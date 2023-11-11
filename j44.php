@@ -35,20 +35,28 @@
     $(document).ready(function(){
       let leftflag=false;
       let rightflag=false;
-      $("#left").focus().blur().click(function(){
-        if($("#left").val().length==0){
-          leftflag=true;
-        }else{
-          leftflag=false;
-          $("#mbutton").prop("disabled",false);
+      // $("#left").focus().blur().click(function(){
+      //   if($("#left").val().length==0){
+      //     leftflag=true;
+      //   }else{
+      //     leftflag=false;
+      //     $("#mbutton").prop("disabled",false);
+      //   }
+      // });
+      // $("#right").focus().blur().click(function(){
+      //   if($("#right").val().length==0){
+      //     rightflag=true;
+      //   }else{
+      //     rightflag=false;
+      //     $("#mbutton").prop("disabled",false);
+      //   }
+      // });
+      $(document).click(function(event) {
+        if(!$(event.target).closest('#left').length) {
+          console.log('左側がクリックされました。');
         }
-      });
-      $("#right").focus().blur().click(function(){
-        if($("#right").val().length==0){
-          rightflag=true;
-        }else{
-          rightflag=false;
-          $("#mbutton").prop("disabled",false);
+        if(!$(event.target).closest('#right').length) {
+          console.log('右側がクリックされました。');
         }
       });
       $("#mbutton").click(function(){
