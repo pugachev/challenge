@@ -34,15 +34,41 @@
 <script>
     $(document).ready(function(){
       let leftflag=false;
-      let rigthflag=false;
+      let rightflag=false;
       $("#left").focus().blur().click(function(){
-
+        if($("#left").val().length==0){
+          leftflag=true;
+        }else{
+          leftflag=false;
+          $("#mbutton").prop("disabled",false);
+        }
       });
       $("#right").focus().blur().click(function(){
-
+        if($("#right").val().length==0){
+          rightflag=true;
+        }else{
+          rightflag=false;
+          $("#mbutton").prop("disabled",false);
+        }
       });
       $("#mbutton").click(function(){
-
+        if($("#left").val().length==0){
+          leftflag=true;
+        }else{
+          leftflag=false;
+        }
+        if($("#right").val().length==0){
+          rightflag=true;
+        }else{
+          rightflag=false;
+        }
+        if(leftflag || rightflag){
+          alert("入力して下さい");
+          $("#mbutton").prop("disabled",true);
+        }else{
+          $("#mbutton").prop("disabled",false);
+          alert("押せますよ！");
+        }
       });
     });
 </script>
