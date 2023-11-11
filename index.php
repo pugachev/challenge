@@ -180,6 +180,10 @@
           <td><a href="./j43.php" target="_blank">棒グラフ(クリックイベント)</a></td>
           <td>棒グラフ</td>
         </tr>
+        <tr>
+          <td><a href="./j44.php" target="_blank">相互チェック</a></td>
+          <td>相互チェック</td>
+        </tr>
       </table>
     </div>
   </main>
