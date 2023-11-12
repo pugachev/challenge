@@ -32,50 +32,20 @@
 
 </style>
 <script>
+
     $(document).ready(function(){
-      let leftflag=false;
-      let rightflag=false;
-      // $("#left").focus().blur().click(function(){
-      //   if($("#left").val().length==0){
-      //     leftflag=true;
-      //   }else{
-      //     leftflag=false;
-      //     $("#mbutton").prop("disabled",false);
-      //   }
-      // });
-      // $("#right").focus().blur().click(function(){
-      //   if($("#right").val().length==0){
-      //     rightflag=true;
-      //   }else{
-      //     rightflag=false;
-      //     $("#mbutton").prop("disabled",false);
-      //   }
-      // });
+
+      let bdisabledflag = false;
+
       $(document).click(function(event) {
-        if(!$(event.target).closest('#left').length) {
-          console.log('左側がクリックされました。');
-        }
-        if(!$(event.target).closest('#right').length) {
-          console.log('右側がクリックされました。');
-        }
-      });
-      $("#mbutton").click(function(){
-        if($("#left").val().length==0){
-          leftflag=true;
-        }else{
-          leftflag=false;
-        }
-        if($("#right").val().length==0){
-          rightflag=true;
-        }else{
-          rightflag=false;
-        }
-        if(leftflag || rightflag){
-          alert("入力して下さい");
-          $("#mbutton").prop("disabled",true);
-        }else{
-          $("#mbutton").prop("disabled",false);
-          alert("押せますよ！");
+        if(!$(event.target).closest('#mbutton').length) {
+          if($("#left").val().length==0 || $("#right").val().length==0){
+            bdisabledflag=true;
+            $("#mbutton").attr("disabled",true);
+          }else{
+            bdisabledflag=false;
+            $("#mbutton").attr("disabled",false);
+          }
         }
       });
     });
