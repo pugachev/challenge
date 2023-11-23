@@ -184,6 +184,10 @@
           <td><a href="./j44.php" target="_blank">相互チェック</a></td>
           <td>相互チェック</td>
         </tr>
+        <tr>
+          <td><a href="./j45.php" target="_blank">セル内にfontタグ</a></td>
+          <td>セル内にfontタグ</td>
+        </tr>
       </table>
     </div>
   </main>
