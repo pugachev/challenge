@@ -2,6 +2,22 @@
 <?php
 $qfd=new QueryFemaleData();
 $results = $qfd->getFemaleData();
+// $tgt = "これが<p>文章となります</p>";
+// $tgt = "これが<font id='tgt' color='red'>文章</font>となります";
+
+$tgt = "当日個室料 5555円\n請求時の案内：アレルギーについて、全員生魚は食べれますか？";
+//         $tgt = str_replace($tgt,"あああ",10,0);
+    //    echo $tgt.PHP_EOL;
+       
+    //   echo mb_strpos($tgt,"請求時の案内").PHP_EOL;
+      
+      $result = mb_str_split($tgt,12);
+      
+//    echo $result[0].PHP_EOL;
+//    echo $result[1].PHP_EOL;
+   
+   $result = $result[0].'<p id="tgt">'.$result[1].'</p>'.PHP_EOL;
+
 ?>
 <style>
         .wrap {
@@ -68,19 +84,23 @@ $results = $qfd->getFemaleData();
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script>
     $(function() {
-        let tmp = 'CoCo壱カレー';
-        test(`${tmp}`+'を食べるぞー');
-        test(tmp+'を食べるぞー');
-        var col_no = $("table th").index(this);
-        // $("td:contains('東京都')").parent('tr').css('fontSize','1.1em');
-        //2カラム目の面積を太字にする
-        $('table tr').eq(2).children('td').eq(1).css('fontSize','1.5em');
-        // $('table tr').eq(2).children('td').eq(3).before(maketooltip($('table tr').eq(2).children('td').eq(3)[0]));
+        // let tmp = 'CoCo壱カレー';
+        // test(`${tmp}`+'を食べるぞー');
+        // test(tmp+'を食べるぞー');
+        // var col_no = $("table th").index(this);
+        // // $("td:contains('東京都')").parent('tr').css('fontSize','1.1em');
+        // //2カラム目の面積を太字にする
+        // $('table tr').eq(2).children('td').eq(1).css('fontSize','1.5em');
+        // // $('table tr').eq(2).children('td').eq(3).before(maketooltip($('table tr').eq(2).children('td').eq(3)[0]));
 
-        $('table tr').eq(2).children('td').eq(3).click(function(){
-            // ここにクリックしたら発火する処理を記述する
-            alert('Hello World!');
-        });
+        // $('table tr').eq(2).children('td').eq(3).click(function(){
+        //     // ここにクリックしたら発火する処理を記述する
+        //     alert('Hello World!');
+        // });
+        // let pos = $("#tgt").text().indexOf("文章");
+        // console.log($("#tgt").text().slice(pos));
+        $("#tgt").css("color","red");
+
     });
     function test(tmp){
         console.log(tmp);
@@ -116,7 +136,7 @@ $results = $qfd->getFemaleData();
                 <tr>
                     <td>東京都</td>
                     <td>2,193km2</td>
-                    <td>13,742,906人</td>
+                    <td><?php echo $result; ?></td>
                     <td>6,263人/km2</td>
                 </tr>
                 <tr>

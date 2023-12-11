@@ -168,6 +168,26 @@
           <td><a href="./j40.php" target="_blank">折れ線グラフ(Chart.js)</a></td>
           <td>PHPで折れ線グラフを描く(Chart.js)</td>
         </tr>
+        <tr>
+          <td><a href="./j41.php" target="_blank">タブテーブル</a></td>
+          <td>タブテーブル</td>
+        </tr>
+        <tr>
+          <td><a href="./j42.php" target="_blank">棒グラフ</a></td>
+          <td>棒グラフ</td>
+        </tr>
+        <tr>
+          <td><a href="./j43.php" target="_blank">棒グラフ(クリックイベント)</a></td>
+          <td>棒グラフ</td>
+        </tr>
+        <tr>
+          <td><a href="./j44.php" target="_blank">相互チェック</a></td>
+          <td>相互チェック</td>
+        </tr>
+        <tr>
+          <td><a href="./j45.php" target="_blank">セル内にfontタグ</a></td>
+          <td>セル内にfontタグ</td>
+        </tr>
       </table>
     </div>
   </main>
