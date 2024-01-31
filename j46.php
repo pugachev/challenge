@@ -16,20 +16,20 @@
         }
 
 </style>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
-    <script>
-    $(function() {
 
-    });
-</script>
   <main>
     <div class="container">
       <div class="wrap">
           <div class="content">
-
+            <div id="mini-calendar"></div>
          </div>
       </div>
     </div>
   </main>
 
+    <script>
+    $(function() {
+
+    });
+</script>
 <?php include 'footer.php' ?>
