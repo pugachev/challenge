@@ -23,7 +23,6 @@ h2 {
   width: 800px;
   margin: 0 auto;
 }
-
 /* header */
 
 header {
@@ -85,6 +84,7 @@ table{
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  overflow-y: scroll;
 }
 
 table tr{
