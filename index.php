@@ -189,8 +189,12 @@
           <td>セル内にfontタグ</td>
         </tr>
         <tr>
-          <td><a href="./j46.php" target="_blank">レスポンシブカレンダー</a></td>
-          <td>レスポンシブカレンダー</td>
+          <td><a href="./j46.php" target="_blank">多重アコーディオン</a></td>
+          <td>多重アコーディオン</td>
+        </tr>
+        <tr>
+          <td><a href="./j47.php" target="_blank">CSS after before等</a></td>
+          <td>CSS after before等</td>
         </tr>
       </table>
     </div>
