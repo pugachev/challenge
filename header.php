@@ -56,6 +56,9 @@ function getFileUpload($file_data, $target_path, $upload_name = '')
   <script src="js/jquery.colorbox-min.js"></script> 
   <script src="js/jquery.minicalendar.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="./index.js"></script>
 </head>
 <body>
   <header>

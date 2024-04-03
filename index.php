@@ -196,6 +196,10 @@
           <td><a href="./j47.php" target="_blank">CSS after before等</a></td>
           <td>CSS after before等</td>
         </tr>
+        <tr>
+          <td><a href="./j48.php" target="_blank">Google Map API</a></td>
+          <td>Google Map API</td>
+        </tr>
       </table>
     </div>
   </main>
