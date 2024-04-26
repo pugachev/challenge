@@ -200,6 +200,10 @@
           <td><a href="./j48.php" target="_blank">Google Map API</a></td>
           <td>Google Map API</td>
         </tr>
+        <tr>
+          <td><a href="./j49.php" target="_blank">array_filter</a></td>
+          <td>array_filter</td>
+        </tr>
       </table>
     </div>
   </main>
