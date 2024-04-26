@@ -50,11 +50,23 @@ async function initMap() {
     title: "ドトール",
   });
 
-  const marker3 = new AdvancedMarkerView({
-    map: map,
-    position: { lat: 34.657527777778, lng: 135.14607222222 },
-    title: "東急プラザ(旧ジョイプラ)",
+  // const marker3 = new AdvancedMarkerView({
+  //   map: map,
+  //   position: { lat: 34.657527777778, lng: 135.14607222222 },
+  //   title: "東急プラザ(旧ジョイプラ)",
+  // });
+
+
+  const beachFlagImg = document.createElement('img');
+  beachFlagImg.src = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+  
+  const beachFlagMarkerView = new google.maps.marker.AdvancedMarkerView({
+      map,
+      position: { lat: 34.657527777778, lng: 135.14607222222 },
+      content: beachFlagImg,
+      title: '東急プラザ(旧ジョイプラ)',
   });
+
 }
 
 initMap();
