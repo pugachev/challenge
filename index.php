@@ -204,6 +204,10 @@
           <td><a href="./j49.php" target="_blank">array_filter</a></td>
           <td>array_filter</td>
         </tr>
+        <tr>
+          <td><a href="./j50.php" target="_blank">menu_json_parse</a></td>
+          <td>menu_json_parse</td>
+        </tr>
       </table>
     </div>
   </main>
