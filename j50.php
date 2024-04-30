@@ -1,4 +1,18 @@
 <?php include 'header.php' ?>
+<?php
+$tgt = [
+    "cate" => "神戸牛",
+    "cateId" => 10,
+    "subcate" => "せいろ蒸し",
+    "subcateArray" => [
+        array("id"=>100,"name"=>"せいろ蒸し(7800円)"),
+		array("id"=>101,"name"=>"せいろ蒸し(1800円)"),
+    ]
+];
+
+$jsonArray = json_encode($tgt);
+
+?>
 <body>
 <main>
     <div class="container">
@@ -12,7 +26,12 @@
     
     <script>
       $(function() {
-
+		// console.log(JSON.parse('<?php echo $jsonArray; ?>'));
+		let array = JSON.parse('<?php echo $jsonArray; ?>');
+		console.log(array['cate']+' '+array['cateId']+' '+array['subcate']);
+		array['subcateArray'].forEach(element => {
+			console.log(element['id'] + ' ' +element['name']);
+		});
       });
     </script>
 </body>
