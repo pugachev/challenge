@@ -12,6 +12,10 @@ $tgt = [
 
 $jsonArray = json_encode($tgt);
 
+  //全データを取得する
+  $qfd=new QueryCategory();
+  $results = $qfd->getCategoryData();
+//   print_r($results);
 ?>
 <body>
 <main>

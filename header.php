@@ -3,6 +3,7 @@ include __DIR__.'/lib/connect.php';
 include __DIR__.'/lib/queryFemaleData.php';
 include __DIR__.'/lib/queryAgeData.php';
 include __DIR__.'/lib/queryFinancialData.php';
+include __DIR__.'/lib/queryCategoryData.php';
 
 
 function getFileUpload($file_data, $target_path, $upload_name = '')
