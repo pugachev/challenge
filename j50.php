@@ -1,28 +1,29 @@
 <?php include 'header.php' ?>
 <?php
-$tgt = [
-    "cate" => "神戸牛",
-    "cateId" => 10,
-    "subcate" => "せいろ蒸し",
-    "subcateArray" => [
-        array("id"=>100,"name"=>"せいろ蒸し(7800円)"),
-		array("id"=>101,"name"=>"せいろ蒸し(1800円)"),
-    ]
-];
+// $tgt = [
+//     "cate" => "神戸牛",
+//     "cateId" => 10,
+//     "subcate" => "せいろ蒸し",
+//     "subcateArray" => [
+//         array("id"=>100,"name"=>"せいろ蒸し(7800円)"),
+// 		array("id"=>101,"name"=>"せいろ蒸し(1800円)"),
+//     ]
+// ];
 
-$jsonArray = json_encode($tgt);
+
 
   //全データを取得する
   $qfd=new QueryCategory();
   $results = $qfd->getCategoryData();
-//   print_r($results);
+  var_dump($results);
+  $jsonArray = json_encode($results);
 ?>
 <body>
 <main>
     <div class="container">
       <div class="wrap">
           <div class="content">
-
+		  	<div id="list-item">
           </div>
       </div>
     </div>
@@ -30,12 +31,43 @@ $jsonArray = json_encode($tgt);
     
     <script>
       $(function() {
-		// console.log(JSON.parse('<?php echo $jsonArray; ?>'));
-		let array = JSON.parse('<?php echo $jsonArray; ?>');
-		console.log(array['cate']+' '+array['cateId']+' '+array['subcate']);
-		array['subcateArray'].forEach(element => {
-			console.log(element['id'] + ' ' +element['name']);
+
+		// liに追加する内容
+		let menudata = [['神戸牛','せいろ蒸し12000','焼き肉100g'],['黒毛和牛','せいろ蒸し13000','焼き肉200g','焼き肉300g'],['オージービーフ1700円']];
+		 
+		$(function() {
+		    var test = '<ul>';
+		    $.each(menudata, function(key, value) {
+			    test = '<li class="cate">'+value[0]+'<ul class="subcate">';
+				$.each(value, function(key2, cvalue) {
+				       if(key2==0){
+				       	console.log(key2 + ' '+ cvalue);
+				       	return true;
+				       }
+					test += '<li>'+cvalue+'</li>';
+				});
+			    test += '</ul></li>';
+			    $('#list-item').append(test);
+		    });
+	           
+			//子要素のクリックイベント
+			$('.cate').click(function() {
+				$(this).children('ul').slideToggle();
+			});
 		});
+
+
+		// var initData = ["リスト", "リスト2", "リスト3"];
+    
+		// $.each(initData, function() {
+		// $("#myList").prepend("<li>" + this + "</li>");
+		// });
+		// console.log(JSON.parse('<?php echo $jsonArray; ?>'));
+		// let array = JSON.parse('<?php echo $jsonArray; ?>');
+		// console.log(array[0]['courseid']+' '+array[0]['coursename']+' '+array[0]['cateid']);
+		// array['subcateArray'].forEach(element => {
+		// 	console.log(element['id'] + ' ' +element['name']);
+		// });
       });
     </script>
 </body>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost:8889
--- 生成日時: 2024 年 5 月 03 日 02:14
+-- 生成日時: 2024 年 5 月 04 日 23:14
 -- サーバのバージョン： 5.7.39
 -- PHP のバージョン: 8.2.0
 
@@ -86,7 +86,8 @@ CREATE TABLE `courses` (
 INSERT INTO `courses` (`id`, `courseid`, `coursename`, `cateid`, `subcateid`) VALUES
 (1, 3000, '神戸牛焼き肉(10000円)', 1000, 2000),
 (2, 3001, '神戸牛せいろ蒸し(12000円)', 1000, 2001),
-(3, 3002, '黒毛和牛すき焼き(8000円)', 1001, 2004);
+(3, 3002, '黒毛和牛すき焼き(8000円)', 1001, 2004),
+(4, 3003, '神戸牛焼き肉(12000円)', 1000, 2000);
 
 -- --------------------------------------------------------
 
@@ -182,7 +183,7 @@ ALTER TABLE `category`
 -- テーブルの AUTO_INCREMENT `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- テーブルの AUTO_INCREMENT `sub_category`

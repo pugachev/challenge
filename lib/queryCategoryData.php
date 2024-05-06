@@ -18,33 +18,64 @@ class QueryCategory extends connect{
     }
 
     public function getCategoryData(){
-        $stmt = $this->dbh->prepare("select c.courseid, c.coursename, ct.cateid, ct.catename, sct.subcateid, sct.subcatename from courses as c left join category as ct on  c.cateid = ct.cateid left join sub_category as sct on  c.subcateid = c.subcateid order by ct.cateid, sct.subcateid, c.courseid");
+        $stmt = $this->dbh->prepare("select c.cateid as cateid, test.catename as catename, c.subcateid as subcateid, test.subcatename as subcatename, c.courseid as courseid, c.coursename as coursename from courses as c left join ( select ct.cateid as cateid, ct.catename as catename, sct.subcateid as subcateid, sct.subcatename as subcatename from category as ct left join sub_category as sct on  ct.cateid = sct.cateid order by ct.cateid, sct.subcateid ) as test on  c.cateid = test.cateid and c.subcateid = test.subcateid");
         $stmt->execute();
-        return $this->setFinancialAllData($stmt->fetchAll(PDO::FETCH_ASSOC));
+        return $this->setCategoryAllData($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
-    public function setFinancialAllData($data){
-
+    public function setCategoryAllData($data){
         var_dump($data);
-        // $tmp=array();
-        // foreach($data as $val){
-        //     // $fd = new FinancialData();
-        //     // $fd->setId($val['id']);
-        //     // $fd->setFinancialNumber($val['financialnumber']);
-        //     // $fd->setItem($val['item']);
-        //     // $fd->setPrice($val['price']);
-        //     // $fd->setOutputFlg($val['outputflg']);
+        $tmp=array();
+        $previous_cateid="";
+        $previous_subcateid="";
+        $course = [];
+        foreach($data as $val){
+            // カテゴリIDを集める
+            $current_cateid = $val['cateid'];
+            // サブカテゴリIDを集める
+            $current_subcateid = $val['subcateid'];
+            
+            // コースIDを集める
+            
+            
+            // // 前の値と現在の値を使って何かを行う
+            // if ($current_cateid !== null) {
+            //     // カテゴリIDが前回と同じ
+            //     if ($current_cateid == $previous_cateid){
+            //         // サブカテゴリIDが前回と同じ
+            //         if(){
 
-        //     // $tmp[] = $fd;
-        //     $tmp[] = array(
-        //         'id'=>$val['id'],
-        //         'financialnumber'=>$val['financialnumber'],
-        //         'item'=>$val['item'],
-        //         'price'=>$val['price'],
-        //         'outputflg'=>$val['outputflg'],
-        //     );
-        // }
-        // return $tmp;
+            //         }
+            //     }   
+            // }else{
+            //     // カテゴリIDが初回の場合は無条件で全てを入れる
+
+            // }
+            
+            // 現在の値を一時変数に代入し、次の反復のために前の値を更新する
+            $previous_cateid = $current_cateid;
+            $previous_subcateid = $current_subcateid;
+
+            //カテゴリが同じ
+                //サブカテゴリが同じ
+                    //コースを集める
+                //サブカテゴリが異なる
+                    //この瞬間にカテゴリとサブカテゴリに対してコース配列を追加する
+                    
+            //カテゴリが異なる
+
+
+
+            // $tmp[] = array(
+            //     'cateid'=>$val['cateid'],
+            //     'catename'=>$val['catename'],
+            //     'subcateid'=>$val['subcateid'],
+            //     'subcatename'=>$val['subcatename'],
+            //     'courseid'=>$val['courseid'],
+            //     'coursename'=>$val['coursename']
+            // );
+        }
+        return $tmp;
     }
 
 }
