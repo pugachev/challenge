@@ -14,9 +14,24 @@
 
   //全データを取得する
   $qfd=new QueryCategory();
-  $results = $qfd->getCategoryData();
-  var_dump($results);
-  $jsonArray = json_encode($results);
+  $tgt = $qfd->getCategoryData();
+//   var_dump($results);
+//   $jsonArray = json_encode($results);
+// $tgt = [];
+// $tgt[] = array("cateid"=>1000,"catename"=>"神戸牛","subcateid"=>2000,"subcatename"=> "焼き肉","courseid"=>3000,"coursename"=>"神戸牛焼き肉(10000円)");
+// $tgt[] = array("cateid"=>1000,"catename"=>"神戸牛","subcateid"=>2000,"subcatename"=> "焼き肉","courseid"=>3003,"coursename"=>"神戸牛焼き肉(12000円)");
+// $tgt[] = array("cateid"=>1000,"catename"=>"神戸牛","subcateid"=>2001,"subcatename"=> "せいろ蒸し","courseid"=>3001,"coursename"=>"神戸牛せいろ蒸し(12000円)");
+// $tgt[] = array("cateid"=>1001,"catename"=>"黒毛和牛","subcateid"=>2004,"subcatename"=> "せいろ蒸し","courseid"=>3002,"coursename"=>"黒毛和牛せいろ蒸し(8000円)");
+
+$result = [];
+foreach ($tgt as $row) {
+    $category = $row['cateid'].'_'.$row['catename'];
+    $subcategory = $row['subcateid'].'_'.$row['subcatename'];
+    $result[$category][$subcategory] = $row['courseid'].'_'.$row['coursename'];
+}
+// $result = MultiColumn($tgt, ['cateid', 'subcateid']);
+
+$jsonArray = json_encode($result);
 ?>
 <body>
 <main>
@@ -36,24 +51,7 @@
 		let menudata = [['神戸牛','せいろ蒸し12000','焼き肉100g'],['黒毛和牛','せいろ蒸し13000','焼き肉200g','焼き肉300g'],['オージービーフ1700円']];
 		 
 		$(function() {
-		    var test = '<ul>';
-		    $.each(menudata, function(key, value) {
-			    test = '<li class="cate">'+value[0]+'<ul class="subcate">';
-				$.each(value, function(key2, cvalue) {
-				       if(key2==0){
-				       	console.log(key2 + ' '+ cvalue);
-				       	return true;
-				       }
-					test += '<li>'+cvalue+'</li>';
-				});
-			    test += '</ul></li>';
-			    $('#list-item').append(test);
-		    });
-	           
-			//子要素のクリックイベント
-			$('.cate').click(function() {
-				$(this).children('ul').slideToggle();
-			});
+			console.log(JSON.parse('<?php echo $jsonArray; ?>'));
 		});
 
 

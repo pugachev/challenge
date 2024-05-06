@@ -24,16 +24,16 @@ class QueryCategory extends connect{
     }
 
     public function setCategoryAllData($data){
-        var_dump($data);
+        // var_dump($data);
         $tmp=array();
         $previous_cateid="";
         $previous_subcateid="";
         $course = [];
         foreach($data as $val){
             // カテゴリIDを集める
-            $current_cateid = $val['cateid'];
-            // サブカテゴリIDを集める
-            $current_subcateid = $val['subcateid'];
+            // $current_cateid = $val['cateid'];
+            // // サブカテゴリIDを集める
+            // $current_subcateid = $val['subcateid'];
             
             // コースIDを集める
             
@@ -53,8 +53,8 @@ class QueryCategory extends connect{
             // }
             
             // 現在の値を一時変数に代入し、次の反復のために前の値を更新する
-            $previous_cateid = $current_cateid;
-            $previous_subcateid = $current_subcateid;
+            // $previous_cateid = $current_cateid;
+            // $previous_subcateid = $current_subcateid;
 
             //カテゴリが同じ
                 //サブカテゴリが同じ
@@ -66,14 +66,14 @@ class QueryCategory extends connect{
 
 
 
-            // $tmp[] = array(
-            //     'cateid'=>$val['cateid'],
-            //     'catename'=>$val['catename'],
-            //     'subcateid'=>$val['subcateid'],
-            //     'subcatename'=>$val['subcatename'],
-            //     'courseid'=>$val['courseid'],
-            //     'coursename'=>$val['coursename']
-            // );
+            $tmp[] = array(
+                'cateid'=>$val['cateid'],
+                'catename'=>$val['catename'],
+                'subcateid'=>$val['subcateid'],
+                'subcatename'=>$val['subcatename'],
+                'courseid'=>$val['courseid'],
+                'coursename'=>$val['coursename']
+            );
         }
         return $tmp;
     }
