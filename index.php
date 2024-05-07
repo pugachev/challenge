@@ -208,6 +208,10 @@
           <td><a href="./j50.php" target="_blank">menu_json_parse</a></td>
           <td>menu_json_parse</td>
         </tr>
+        <tr>
+          <td><a href="./j51.php" target="_blank">二重リスト作成</a></td>
+          <td>二重リスト作成</td>
+        </tr>
       </table>
     </div>
   </main>
