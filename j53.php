@@ -75,13 +75,21 @@ echo "var categoriesData = " . json_encode($jsCategoriesData) . ";";
 echo "</script>";
 ?>
     <style>
-        .category {
+        /* .category {
             cursor: pointer;
         }
         .subcategory {
             display: none;
             padding-left: 20px;
-        }
+        } */
+
+		ul{
+			/* padding-left:0; */
+		}
+
+		li{
+			list-style:none;
+		}
     </style>
 <body>
 <main>
