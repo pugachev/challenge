@@ -90,13 +90,16 @@ echo "</script>";
 		li{
 			list-style:none;
 		}
+        .subcategory{
+            /* display: none; */
+        }
     </style>
 <body>
 <main>
     <div class="container">
       <div class="wrap">
           <div class="content">
-		  	<div id="categories"></div>
+		  	<div class='accordion' id="categories"></div>
           </div>
       </div>
     </div>
@@ -108,13 +111,14 @@ echo "</script>";
 		var categoryList = "<ul>";
 
 		for (var i = 0; i < categoriesData.length; i++) {
-			categoryList += "<li>" + categoriesData[i][0] + "<ul>";
+            // カテゴリ
+			categoryList += "<li class='category' value=" + categoriesData[i][0].split('_')[0] + ">" +  categoriesData[i][0].split('_')[1] + "<ul>";
 
 			for (var j = 1; j < categoriesData[i].length; j++) {
-				categoryList += "<li>" + categoriesData[i][j][0] + "<ul>";
+				categoryList += "<li class='subcategory' value="+categoriesData[i][j][0].split('_')[0]+">" + categoriesData[i][j][0].split('_')[1] + "<ul>";
 
 				for (var k = 0; k < categoriesData[i][j][1].length; k++) {
-					categoryList += "<li>" + categoriesData[i][j][1][k] + "</li>";
+					categoryList += "<li class='course' value="+categoriesData[i][j][1][k].split('_')[0]+">" + categoriesData[i][j][1][k].split('_')[1] + "</li>";
 				}
 
 				categoryList += "</ul></li>";
@@ -127,7 +131,43 @@ echo "</script>";
 
 		$('#categories').html(categoryList);
 
+
       });
+
+      $(document).ready(function(){
+        // 初期状態ではすべてのサブリストを非表示にする
+        $('.accordion ul ul').hide();
+
+        // アコーディオンメニューのクリックイベントを処理する
+        $('.accordion > ul  li').click(function() {
+
+            // イベントのバブリングを停止し、親要素のイベントがトリガーされるのを防ぐ
+            event.stopPropagation();
+
+            // 直接の子要素のサブリストを開閉する
+            $(this).children('ul').slideToggle();
+
+            // 兄弟要素のサブリストを閉じる
+            $(this).siblings().children('ul > li').slideUp();
+
+            return false;
+        });
+
+        // 二番目のレベルのサブメニューのクリックイベントを処理する
+        $('.accordion > ul > li > ul > li').click(function(event) {
+            // イベントのバブリングを停止し、親要素のイベントがトリガーされるのを防ぐ
+            event.stopPropagation();
+
+            // 直接の子要素のサブリストを開閉する
+            $(this).children('ul').slideToggle();
+
+            // 兄弟要素のサブリストを閉じる
+            $(this).siblings().children('ul li').slideUp();
+
+            return false;
+        });
+    });
+
     </script>
 </body>
 <?php include 'footer.php' ?>
