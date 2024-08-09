@@ -19,7 +19,9 @@ $results = $qfd->getFemaleData();
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script>
     $(function() {
-
+        const array = [1, 1, 2, 3, 4, 4, 5, 5, 5, 6];
+        const uniqueArray = Array.from(new Set(array));
+        console.log(uniqueArray);
         $("#addSelect").on('click',function(){
             //現在のfemale-groupsの長さを取得する
             let groupCnt = $("#female-groups > .female-group").length;
