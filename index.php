@@ -216,6 +216,10 @@
           <td><a href="./j52.php" target="_blank">二重リスト作成ver2</a></td>
           <td>二重リスト作成ver2</td>
         </tr>
+        <tr>
+          <td><a href="./j54.php" target="_blank">マイコンテスト</a></td>
+          <td>セレクトボックスの連動</td>
+        </tr>
       </table>
     </div>
   </main>
