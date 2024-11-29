@@ -5,7 +5,7 @@
       <h1>WORKS</h1>
       <table>
         <tr>
-          <th>やってる技術</th>
+          <th>やってる技術 2024</th>
           <th>備考</th>
         </tr>
         <tr>
